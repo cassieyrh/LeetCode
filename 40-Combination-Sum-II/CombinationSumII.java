@@ -1,0 +1,30 @@
+public class Solution {
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (candidates == null || candidates.length == 0) return res;
+        
+        Arrays.sort(candidates);
+        List<Integer> curr = new ArrayList<>();
+        combSum(candidates, target, 0, res, curr);
+        return res;
+    }
+    
+    public void combSum(int[] candidates, int target, int j, List<List<Integer>> res, List<Integer> curr){
+        if (target == 0){
+            List<Integer> temp = new ArrayList<>(curr);
+            res.add(temp);
+            return;
+        }
+        
+        for (int i = j; i < candidates.length; i++){
+            if (candidates[i] > target){
+                return;
+            }
+            //skip duplicated values
+            if (i > j && candidates[i]==candidates[i-1]) continue;
+            curr.add(candidates[i]);
+            combSum(candidates, target - candidates[i], i+1, res, curr);
+            curr.remove(curr.size()-1);
+        }
+    }
+}

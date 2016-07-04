@@ -6,13 +6,13 @@ public class Solution {
         List<Integer> pre = triangle.get(0);
         
         for (int i = 1; i< n; i++){
-            List<Integer> cur = new ArrayList<Integer>();
+            List<Integer> cur = new ArrayList<Integer>(triangle.get(i));
             //int len = i+1;
-            cur.add(0, triangle.get(i).get(0) + pre.get(0));
+            cur.set(0, cur.get(0) + pre.get(0));
             for(int j = 1; j < i; j++){  //notice here: j<i
-                cur.add(j, triangle.get(i).get(j) + Math.min(pre.get(j-1),pre.get(j)));
+                cur.set(j, cur.get(j) + Math.min(pre.get(j-1),pre.get(j)));
             }
-            cur.add(i, triangle.get(i).get(i) + pre.get(i-1));
+            cur.set(i, cur.get(i) + pre.get(i-1));
             pre = new ArrayList<Integer>(cur);
         }
         int min = Integer.MAX_VALUE;

@@ -27,12 +27,6 @@ Special thanks to [@amrsaqr](https://leetcode.com/discuss/user/amrsaqr) for addi
 
 <div>
 
-<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
-
-<span class="hidebutton">[Amazon](/company/amazon/)</span></div>
-
-<div>
-
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Tree](/tag/tree/) [Depth-first Search](/tag/depth-first-search/) [Breadth-first Search](/tag/breadth-first-search/)</span></div>

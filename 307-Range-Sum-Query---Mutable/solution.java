@@ -60,9 +60,12 @@ public class NumArray {
     }
     
     public int sumRange(SegmentTreeNode root, int start, int end) {
-        if (root.end == end && root.start == start) {
+        if(root==null || end<root.start || start > root.end ||start>end )
+            return 0;
+        else if(start<=root.start && end>=root.end){
             return root.sum;
-        } else {
+        }    
+        else {
             int mid = root.start + (root.end - root.start) / 2;
             if (end <= mid) {
                 return sumRange(root.left, start, end);

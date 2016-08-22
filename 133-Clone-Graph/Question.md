@@ -39,6 +39,12 @@ Visually, the graph looks like the following:
 
 <div>
 
+<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
+
+<span class="hidebutton">[Facebook](/company/facebook/) [Google](/company/google/) [Pocket Gems](/company/pocket-gems/) [Uber](/company/uber/)</span></div>
+
+<div>
+
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Depth-first Search](/tag/depth-first-search/) [Breadth-first Search](/tag/breadth-first-search/) [Graph](/tag/graph/)</span></div>

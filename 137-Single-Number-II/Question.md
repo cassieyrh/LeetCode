@@ -23,4 +23,4 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
 
 <div id="similar" class="btn btn-xs btn-warning">Show Similar Problems</div>
 
-<span class="hidebutton">[(M) Single Number](/problems/single-number/) [(M) Single Number III](/problems/single-number-iii/)</span></div>
+<span class="hidebutton">[(E) Single Number](/problems/single-number/) [(M) Single Number III](/problems/single-number-iii/)</span></div>

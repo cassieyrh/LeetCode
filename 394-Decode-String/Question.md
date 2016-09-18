@@ -22,3 +22,9 @@ s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 [Subscribe](/subscribe/) to see which companies asked this question
 
 </div>
+
+<div>
+
+<div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
+
+<span class="hidebutton">[Depth-first Search](/tag/depth-first-search/) [Stack](/tag/stack/)</span></div>

@@ -1,12 +1,23 @@
 public class Solution {
     public int minCut(String s) {
-        int[] cut = new int[s.length() + 1];
-        for(int i = 0; i < s.length(); i++) cut[i] = Integer.MAX_VALUE;
-        cut[s.length()] = -1;
-        for(int i = s.length()-1; i >=0; i--){
-            for(int a = i, b = i; a >=0 && b < s.length() && s.charAt(a) == s.charAt(b); a--, b++) cut[a] = Math.min(cut[a], cut[b+1]+1);    //odd palindrome
-            for(int a = i, b = i+1; a >=0 && b < s.length() && s.charAt(a) == s.charAt(b); a--, b++) cut[a] = Math.min(cut[a], cut[b+1]+1);    //even palindrome
+        int n = s.length();
+        boolean[][] isPalindrom = new boolean[n][n];
+        for(int i = n-1; i >=0; i--){
+            for(int j = i; j < n; j++){
+                if((j-i < 2 || isPalindrom[i+1][j-1]) && s.charAt(i) == s.charAt(j)){
+                    isPalindrom[i][j] = true;
+                }
+            }
         }
-        return cut[0];
+        int[] dp = new int[n+1];
+        dp[0] = -1;
+        for(int i = 1; i <= n; i++){
+            dp[i] = Integer.MAX_VALUE;
+            for(int j = 0; j < i; j++){
+                if(isPalindrom[j][i-1])
+                dp[i] = Math.min(dp[i], dp[j] +1);
+            }
+        }
+        return dp[n];
     }
 }

@@ -18,12 +18,6 @@ Your algorithm should run in O(_n_) complexity.
 
 <div>
 
-<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
-
-<span class="hidebutton">[Facebook](/company/facebook/) [Google](/company/google/)</span></div>
-
-<div>
-
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Array](/tag/array/) [Union Find](/tag/union-find/)</span></div>
